@@ -78,12 +78,14 @@
 
 **Ожидаемый результат:** У каждого товара свое уникальное изображение
 
-**Скриншоты:**
-
-![standard_user](screenshots/BUG_001_standard_user.JPG)
-
-![problem_user](screenshots/BUG_001_problem_user.JPG)
-
-
 **Логи (Console DevTools):**
 - `inventory.html:1 Failed to load resource: the server responded with a status of 404 ()`
+
+**Скриншоты:**
+
+![standard_user](/screenshots/BUG_001_standard_user.JPG)
+
+![problem_user](/screenshots/BUG_001_problem_user.JPG)
+
+
+
