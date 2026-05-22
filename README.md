@@ -1,4 +1,13 @@
-**Чек-лист: авторизация на SauceDemo**
+# Портфолио по тестированию
+
+Проект: **SauceDemo** (учебный интернет-магазин)
+
+Содержание:
+- Чек-лист авторизации
+- 3 тест-кейса
+- Баг-репорт со скриншотами
+
+# Чек-лист: авторизация на SauceDemo
 
 | № | Проверка | Логин | Пароль | Ожидание | Результат |
 |---|----------|-------|--------|----------|-----------|
@@ -11,7 +20,9 @@
 | 7 | Неверный логин | fake_user | secret_sauce | Epic sadface: Username and password do not match any user in this service | ОК |
 | 8 | Неверный пароль | standard_user | fake_pass | Epic sadface: Username and password do not match any user in this service | ОК |
 
-**Тест-кейсы: авторизация на SauceDemo**
+---
+
+# Тест-кейсы: авторизация на SauceDemo
 
 **TC-01 – Успешная авторизация с корректным пользователем**
 **Предусловия:** открыта страница https://www.saucedemo.com/
@@ -19,6 +30,7 @@
 1. В поле Username ввести `standard_user`
 2. В поле Password ввести `secret_sauce`
 3. Нажать кнопку Login
+
 **Ожидаемый результат:** Открывается страница https://www.saucedemo.com/inventory.html
 
 ---
@@ -47,9 +59,9 @@
 
 **Ожидаемый результат:** Появляется сообщение об ошибке `Epic sadface: Username and password do not match any user in this service`
 
+---
 
-
-**Баг-репорт**
+# Баг-репорт
 
 **Заголовок:** Главная страница: У пользователя problem_user у всех товаров одинаковые картинки
 
