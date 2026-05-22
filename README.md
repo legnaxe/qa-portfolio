@@ -78,8 +78,8 @@
 
 **Ожидаемый результат:** У каждого товара свое уникальное изображение
 
-**Скриншоты:** ![standard_user](./screenshots/BUG_001_standard_user.jpg)
-![problem_user](./screenshots/BUG_001_problem_user.jpg)
+**Скриншоты:** ![standard_user](./screenshots/BUG_001_standard_user.JPG)
+![problem_user](./screenshots/BUG_001_problem_user.JPG)
 
 
 **Логи (Console DevTools):**
