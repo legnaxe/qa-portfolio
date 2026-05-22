@@ -1,15 +1,17 @@
-Чек-лист: авторизация на SauceDemo
-№	Проверка	Логин	Пароль	Ожидание	Результат
-1	Успешный вход (standard_user)	standard_user	secret_sauce	редирект на /inventory.html	ОК
-2	Успешный вход (problem_user)	problem_user	secret_sauce	редирект на /inventory.html	ОК
-3	Успешный вход (performance_glitch_user)	performance_glitch_user	secret_sauce	редирект на /inventory.html	ОК
-4	Пустой логин	(пусто)	secret_sauce	Epic sadface: Username is required	ОК
-5	Пустой пароль	standard_user	(пусто)	Epic sadface: Password is required	ОК
-6	Оба поля пустые	(пусто)	(пусто)	Epic sadface: Username is required	ОК
-7	Неверный логин	fake_user	secret_sauce	Epic sadface: Username and password do not match any user in this service	ОК
-8	Неверный пароль	standard_user	fake_pass	Epic sadface: Username and password do not match any user in this service	ОК
+**Чек-лист: авторизация на SauceDemo**
 
-Тест-кейсы: авторизация на SauceDemo
+| № | Проверка | Логин | Пароль | Ожидание | Результат |
+|---|----------|-------|--------|----------|-----------|
+| 1 | Успешный вход (standard_user) | standard_user | secret_sauce | редирект на /inventory.html | ОК |
+| 2 | Успешный вход (problem_user) | problem_user | secret_sauce | редирект на /inventory.html | ОК |
+| 3 | Успешный вход (performance_glitch_user) | performance_glitch_user | secret_sauce | редирект на /inventory.html | ОК |
+| 4 | Пустой логин | (пусто) | secret_sauce | Epic sadface: Username is required | ОК |
+| 5 | Пустой пароль | standard_user | (пусто) | Epic sadface: Password is required | ОК |
+| 6 | Оба поля пустые | (пусто) | (пусто) | Epic sadface: Username is required | ОК |
+| 7 | Неверный логин | fake_user | secret_sauce | Epic sadface: Username and password do not match any user in this service | ОК |
+| 8 | Неверный пароль | standard_user | fake_pass | Epic sadface: Username and password do not match any user in this service | ОК |
+
+**Тест-кейсы: авторизация на SauceDemo**
 
 **TC-01 – Успешная авторизация с корректным пользователем**
 **Предусловия:** открыта страница https://www.saucedemo.com/
