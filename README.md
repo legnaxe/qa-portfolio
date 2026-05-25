@@ -87,14 +87,11 @@
 
 ![problem_user](/screenshots/BUG_001_problem_user.JPG)
 
-### SQL запрос (авиаперелёты)
+### SQL запросы
 
-**Задача:**  
-Вывести рейсы дороже 1000: номер рейса, город вылета, город прилёта, производителя и модель самолёта.
+**Запрос 1 (базовый):** Рейсы дороже 1000
 
-**Запрос:**
-
-```text
+```sql
 SELECT 
     f.flight_number, 
     adp.city AS departure_city, 
@@ -109,6 +106,19 @@ WHERE f.flight_charge > 1000
 ORDER BY f.flight_charge DESC;
 ```
 
+**Запрос 2 (агрегация):** Модели самолётов со средней ценой > 1500
+
+```sql
+SELECT 
+    a.model, 
+    AVG(f.flight_charge) AS avg_charge, 
+    COUNT(f.flight_id) AS total_flights
+FROM flight f 
+JOIN aircraft a ON f.aircraft_aircraft_id = a.aircraft_id
+GROUP BY a.model
+HAVING AVG(f.flight_charge) > 1500
+ORDER BY avg_charge DESC;
+```
 
 ### API тестирование (Postman)
 
@@ -121,3 +131,5 @@ ORDER BY f.flight_charge DESC;
 **POST-запрос** — создание нового поста:
 
 ![POST-запрос](./screenshots/Postman_POST.JPG)
+
+
