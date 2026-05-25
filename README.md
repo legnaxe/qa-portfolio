@@ -108,3 +108,14 @@ JOIN aircraft a ON a.aircraft_id = f.aircraft_aircraft_id
 WHERE f.flight_charge > 1000
 ORDER BY f.flight_charge DESC;
 
+### API тестирование (Postman)
+
+Тестируемое API: [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+
+**GET-запрос** — получение списка постов:
+
+![GET-запрос](./screenshots/Postman_GET.png)
+
+**POST-запрос** — создание нового поста:
+
+![POST-запрос](./screenshots/Postman_POST.png)
