@@ -94,7 +94,7 @@
 
 **Запрос:**
 
-```sql
+```text
 SELECT 
     f.flight_number, 
     adp.city AS departure_city, 
@@ -114,8 +114,8 @@ ORDER BY f.flight_charge DESC;
 
 **GET-запрос** — получение списка постов:
 
-![GET-запрос](./screenshots/Postman_GET.png)
+![GET-запрос](./screenshots/Postman_GET.JPG)
 
 **POST-запрос** — создание нового поста:
 
-![POST-запрос](./screenshots/Postman_POST.png)
+![POST-запрос](./screenshots/Postman_POST.JPG)
