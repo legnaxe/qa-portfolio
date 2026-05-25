@@ -87,5 +87,24 @@
 
 ![problem_user](/screenshots/BUG_001_problem_user.JPG)
 
+### SQL запрос (авиаперелёты)
 
+**Задача:**  
+Вывести рейсы дороже 1000: номер рейса, город вылета, город прилёта, производителя и модель самолёта.
+
+**Запрос:**
+
+```sql
+SELECT 
+    f.flight_number, 
+    adp.city AS departure_city, 
+    ads.city AS destination_city, 
+    a.manufacturer, 
+    a.model
+FROM flight f
+JOIN airport adp ON f.departure_airport_airport_id = adp.airport_id
+JOIN airport ads ON f.destination_airport_airport_id = ads.airport_id
+JOIN aircraft a ON a.aircraft_id = f.aircraft_aircraft_id
+WHERE f.flight_charge > 1000
+ORDER BY f.flight_charge DESC;
 
