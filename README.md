@@ -108,7 +108,7 @@ JOIN aircraft a ON a.aircraft_id = f.aircraft_aircraft_id
 WHERE f.flight_charge > 1000
 ORDER BY f.flight_charge DESC;
 
-
+</br>
 
 ### API тестирование (Postman)
 
