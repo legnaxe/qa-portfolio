@@ -128,7 +128,6 @@ ORDER BY avg_charge DESC;
 - **URL:** https://jsonplaceholder.typicode.com/posts
 - **Ожидаемый статус:** 200 OK
 - **Фактический статус:** 200 ✅
-- **Что проверено:** В ответе приходит массив из 100 объектов, каждый содержит поля userId, id, title, body.
 
 ![GET-запрос](./screenshots/Postman_GET.JPG)
 
@@ -136,14 +135,13 @@ ORDER BY avg_charge DESC;
 - **URL:** https://jsonplaceholder.typicode.com/posts
 - **Тело запроса:**
   ```json
-  {
-    "title": "test post",
-    "body": "lorem ipsum",
-    "userId": 1
-  }
+{
+    "title": "Тестирование API: проверка создания задачи",
+    "body": "Задача №2: создание новой записи",
+    "userId": 7
+}
 
 - **Ожидаемый статус:** 201 Created
 - **Фактический статус:** 201 ✅
-- **Что проверено:** В ответе приходит созданный объект с новым id = 101.
 
 ![POST-запрос](./screenshots/Postman_POST.JPG)
