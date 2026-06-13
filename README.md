@@ -55,9 +55,13 @@
 
 ---
 
-### 🐞 Найденные баги
+### 🐞 Баг-репорт 
 
 #### BUG_001: одинаковые изображения у problem_user
+
+**Окружение:**
+- OS: Windows 10
+- Браузер: Google Chrome, версия: 148.0.7778.218
 
 **Priority:** Medium  
 **Severity:** Major  
@@ -78,9 +82,10 @@
 
 **Скриншоты:**
 
+![problem_user](/screenshots/BUG_001_problem_user.JPG)
+
 ![standard_user](/screenshots/BUG_001_standard_user.JPG)
 
-![problem_user](/screenshots/BUG_001_problem_user.JPG)
 
 ## 2. 🗄️ Работа с SQL (базы данных)
 
@@ -119,14 +124,26 @@ ORDER BY avg_charge DESC;
 
 Тестируемое API: [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
 
-**Что проверено:** статус-код 200 (GET) и 201 (POST), структура ответа соответствует документации.
-
-**GET-запрос** — получение списка постов:
+### GET /posts
+- **URL:** https://jsonplaceholder.typicode.com/posts
+- **Ожидаемый статус:** 200 OK
+- **Фактический статус:** 200 ✅
+- **Что проверено:** В ответе приходит массив из 100 объектов, каждый содержит поля userId, id, title, body.
 
 ![GET-запрос](./screenshots/Postman_GET.JPG)
 
-**POST-запрос** — создание нового поста:
+### POST /posts
+- **URL:** https://jsonplaceholder.typicode.com/posts
+- **Тело запроса:**
+  ```json
+  {
+    "title": "test post",
+    "body": "lorem ipsum",
+    "userId": 1
+  }
+
+- **Ожидаемый статус:** 201 Created
+- **Фактический статус:** 201 ✅
+- **Что проверено:** В ответе приходит созданный объект с новым id = 101.
 
 ![POST-запрос](./screenshots/Postman_POST.JPG)
-
-
