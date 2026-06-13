@@ -138,13 +138,13 @@ ORDER BY avg_charge DESC;
 - **URL:** https://jsonplaceholder.typicode.com/posts
 - **Тело запроса:**
 
-  ```json
+```json
 {
     "title": "Тестирование API: проверка создания задачи",
     "body": "Задача №2: создание новой записи",
     "userId": 7
 }
-  ```
+```
 
 - **Ожидаемый статус:** 201 Created
 - **Фактический статус:** 201 ✅
