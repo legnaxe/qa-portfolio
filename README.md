@@ -32,29 +32,31 @@
 
 | № | Проверка | Логин | Пароль | Ожидание | Результат |
 |---|----------|-------|--------|----------|-----------|
-| 1 | Успешный вход (standard_user) | standard_user | secret_sauce | редирект на /inventory.html | ОК |
-| 2 | Успешный вход (problem_user) | problem_user | secret_sauce | редирект на /inventory.html | ОК |
-| 3 | Успешный вход (performance_glitch_user) | performance_glitch_user | secret_sauce | редирект на /inventory.html | ОК |
-| 4 | Пустой логин | (пусто) | secret_sauce | Epic sadface: Username is required | ОК |
-| 5 | Пустой пароль | standard_user | (пусто) | Epic sadface: Password is required | ОК |
-| 6 | Оба поля пустые | (пусто) | (пусто) | Epic sadface: Username is required | ОК |
-| 7 | Неверный логин | fake_user | secret_sauce | Epic sadface: Username and password do not match any user in this service | ОК |
-| 8 | Неверный пароль | standard_user | fake_pass | Epic sadface: Username and password do not match any user in this service | ОК |
+| 1 | Успешный вход | standard_user | secret_sauce | редирект на /inventory.html | ОК |
+| 2 | Пустой логин | (пусто) | secret_sauce | Epic sadface: Username is required | ОК |
+| 3 | Пустой пароль | standard_user | (пусто) | Epic sadface: Password is required | ОК |
+| 4 | Оба поля пустые | (пусто) | (пусто) | Epic sadface: Username is required | ОК |
+| 5 | Неверный логин | fake_user | secret_sauce | Epic sadface: Username and password do not match any user in this service | ОК |
+| 6 | Неверный пароль | standard_user | fake_pass | Epic sadface: Username and password do not match any user in this service | ОК |
 
 ---
 
 ### 🧾 Тест-кейс
 
-**TC-01 – Успешная авторизация с корректным пользователем**
+**TC-01 – Проверка валидации поля Zip/Postal Code при оформлении заказа**
 
-**Предусловия:** открыта страница https://www.saucedemo.com/
+| **Атрибут** | **Значение** |
+|-------------|---------------|
+| **ID** | TC-01 |
+| **Название** | Валидация поля Zip/Postal Code: ввод невалидного индекса |
+| **Ссылка на требование** | Требование отсутствует (тестирование на основе общепринятой практики e-commerce) |
+| **Приоритет** | High |
+| **Тип** | Функциональное тестирование / Негативный сценарий |
+| **Предусловия** | 1. Пользователь авторизован как `standard_user`<br>2. Любой товар добавлен в корзину<br>3. Открыта страница `https://www.saucedemo.com/checkout-step-one.html` |
+| **Шаги воспроизведения** | 1. В поле First Name ввести `Test`<br>2. В поле Last Name ввести `Test`<br>3. В поле Zip/Postal Code ввести `123` (заведомо невалидный индекс)<br>4. Нажать кнопку **Continue** |
+| **Ожидаемый результат** | Система не переходит на следующий шаг. Отображается сообщение об ошибке: "Please enter a valid postal code" |
 
-**Шаги:**
-1. В поле Username ввести `standard_user`
-2. В поле Password ввести `secret_sauce`
-3. Нажать кнопку Login
-
-**Ожидаемый результат:** Открывается страница https://www.saucedemo.com/inventory.html
+**Статус выполнения:** FAIL (оформлен баг-репорт BUG_001)
 
 ---
 
@@ -155,4 +157,5 @@ ORDER BY avg_charge DESC;
 - **Фактический статус:** 201 ✅
 
 ![POST-запрос](./screenshots/Postman_POST.JPG)
+
 
